@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: #003344;
+    --green: #90BB9F;
+    --teal: #026578;
+    --peach: #D8B4A0;
+    --gold: #DF9A57;
+    --black: #000000;
+    --white: #FFFFFF;
+    --logoteal: #01404f;
+    --logoltgreen: #95c0a4;
+    --logogreen: #537270;
+}
+
+body {
+    width: 100%;
+    background: radial-gradient(#026578 0%, #003344 96%);
+    font-family: Archivo;
+    padding: 0;
+    margin: 0;
+}
+/* ********************* HEADER STYLING *********************  */
+.header,
+.footer {
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Raleway;
+}
+
+.header img {
+    width: 125px;
+}
+
+.header p {
+    display:inline-block;
+    padding-right: 10px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.header-links a:link,
+.footer a:link,
+.header-links a:visited,
+.footer a:visited {
+    text-decoration:none;
+    color: var(--gold);
+}
+
+.header-links a:hover,
+.footer a:hover {
+    background-color:var(--logoltgreen);
+    color: var(--blue);
+}
+
+.header-links a:active,
+.footer a:active {
+    color: var(--white);
+    background-color: var(--teal);
+}
+
+/* ********************* EXIT BUTTON *********************  */
+.exit-button {
+    display: flex;
+    justify-content:flex-end;
+    position: sticky;
+    top: 5vh;
+}
+.exit {
+    display: flex;
+    justify-content: center;
+    
+    background-color:#F0544F;
+    color: var(--white);
+    font-weight: bold;
+    border-width: 1px;
+    border-color: var(--peach);
+    border-style: solid;
+    border-radius: 5px;
+    padding:2px;
+    width: 10vh;
+}
+
+/* ********************* GENERAL PAGE STYLING *********************  */
+
+.home,
+.about,
+.resources,
+.faq {
+    height: 80vh;
+    }
+
+.page-contents {
+    background-color: #D3E0E3;
+    /* opacity: 0.8; */
+    margin: 2vh;
+    border:#000000;
+    border-width: 2px;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+h1,
+h3 {
+    text-align: center;
+}
+
+
+/* ********************* HOME PAGE STYLING *********************  */
+
+.home-title p{
+    text-align: center;
+    padding-bottom: 5vh;
+}
+
+.home-help {
+    display: flex;
+    justify-content:space-evenly;
+    }
+
+.home-help-links p {
+    /* border-width: 2px; */
+    /* border-color: var(--black); */
+    /* background-color: var(--gold); */
+    /* padding: 8px; */
+}
+
+.home h2 {
+    padding-left: 5vh;
+}
+
+.home-help-links {
+    color: #fff;
+    font-size: 18px;
+    max-width: 58ch;
+    text-align: center;
+  
+      /* triangle dimension */
+  --b: 2em; /* base */
+  --h: 1em; /* height */
+
+  --p: 50%; /* triangle position (0%:top 100%:bottom) */
+  
+  padding: 1em;
+  clip-path: polygon(0 100%,100% 100%,100% 0,0 0,
+    0 max(0%  ,var(--p) - var(--b)/2),
+    calc(-1*var(--h)) var(--p),
+    0 min(100%,var(--p) + var(--b)/2));
+  border-image: fill 0//var(--h)
+    conic-gradient(var(--gold) 0 0); /* the color */
+
+}
