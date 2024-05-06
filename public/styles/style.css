@@ -17,7 +17,8 @@
 
 body {
   width: 100%;
-  background: radial-gradient(#026578 0%, #003344 96%);
+  /* background: linear-gradient(#026578 0%, #95c0a4 50%); */
+  background-image: linear-gradient(to right bottom, #026578, #237681, #3d8889, #579990, #71aa98, #80b7aa, #90c4bc, #a2d1cd, #b9dce3, #d4e6f1, #edf1f9, #ffffff);
   font-family: Archivo;
   padding: 0;
   margin: 0;
@@ -25,7 +26,7 @@ body {
 /* ********************* HEADER STYLING *********************  */
 .header,
 .footer {
-  background-color: var(--white);
+  background-color: #d7dedc;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -220,6 +221,10 @@ hr.gradient {
 }
 
 /* ********************* FOOTER STYLING *********************  */
+.footer {
+  color:#000000;
+}
+
 .footer-contact {
   display: flex;
   justify-content: space-evenly;
@@ -232,6 +237,23 @@ hr.gradient {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+
+.footer a:link,
+.footer a:visited {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.footer a:hover {
+  background-color: var(--logoltgreen);
+  color: var(--blue);
+}
+
+.footer a:active {
+  color: var(--white);
+  background-color: var(--teal);
 }
 
 /* ********************* --------------------- *********************  */
