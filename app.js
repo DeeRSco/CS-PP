@@ -1,6 +1,6 @@
-require("dontenv").config();
+require("dotenv").config();
 require("./config/connection");
-//require("./config/authStrategy");
+require("./config/authStrategy");
 
 //PACKAGES
 const express = require('express');
@@ -15,7 +15,7 @@ const adminRoutes = require("./routes/adminRoutes");
 
 //MIDDLEWARE
 const app = express();
-const PORT = 5500;
+const PORT = process.env.PORT || 5500;
 const cors = require("cors");
 
 app.use(morgan("dev"));
@@ -27,14 +27,14 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use(helmet({contentSecurityPolicy: false}));
 
-/*app.use(session({
+app.use(session({
     secret: process.env.SECRET_KEY,
     resave: false,
     saveUninitialized: false,
 }));
-*/
 
-//app.use(passport.initialize());
+
+app.use(passport.initialize());
 
 
 //ROUTING

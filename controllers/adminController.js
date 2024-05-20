@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt");
 
 const resources = require("../data/data");
 
-const login (request, response, next) => {
+const login = (request, response, next) => {
     response.status(200).json({
         success: {message: "You've logged in"},
         statusCode: 200
