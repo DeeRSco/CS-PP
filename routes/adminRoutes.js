@@ -27,4 +27,4 @@ router.get("/login/local/failed", loginLocalFailed);
 
 router.get("/logout", logoutRequest);
 
-module.exports = { loginLocalFailed, logoutRequest}
+module.exports = router;
