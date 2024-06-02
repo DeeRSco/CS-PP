@@ -1,8 +1,8 @@
 const passport = require("passport");
 const bcrypt = require("bcrypt");
 
-const GoogleStrategy = require("passport-google-oauth20").Strategy
 const LocalStrategy = require("passport-local").Strategy;
+const GoogleStrategy = require("passport-google-oauth20").Strategy
 
 const User = require("../models/userModel");
 
@@ -34,13 +34,15 @@ passport.use(
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: 'http://localhost:3000/auth/google'
+    callbackURL: 'http://localhost:5500/auth/google'
 },
 (accessToken, refreshToken, profile,done)=>{
     console.log(profile);
     return done(null, profile);
 }
 ));
+
+
 
 passport.serializeUser((user, done)=> {
     done(null, user);

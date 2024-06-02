@@ -23,8 +23,21 @@ router.post("/login/local",
     }
 );
 
-router.get("/login/local/failed", loginLocalFailed);
+router.get('/login/local/failed', loginLocalFailed);
 
-router.get("/logout", logoutRequest);
+router.get('/logout', logoutRequest);
+
+router.get('/login/google', passport.authenticate('google',{scope: ['profile']}));
+
+router.get('login/google/failed', (request, response, next) => {
+    response.json({message: 'There is a problem with Google Authentication'})
+});
+
+
+//GOOGLE ROUTES
+router.get('/auth/google', passport.authenticate('google', {
+    successRedirect: '/',
+    failureRedirect: '/login/local/failed'
+}));
 
 module.exports = router;
