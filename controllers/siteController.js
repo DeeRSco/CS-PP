@@ -61,7 +61,7 @@ const createResource = async (request, response, next) => {
     });
   } catch (error) {
     response.status(400).json({
-      error: { message: "Something went wrong creating a book" },
+      error: { message: "Something went wrong creating a resource" },
       statusCode: 400,
     });
   }
