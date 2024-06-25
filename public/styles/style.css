@@ -162,6 +162,18 @@ hr.gradient {
   padding: 8px;
 }
 
+.home-help-links a:link,
+.home-help-links a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.home-help-links a:hover {
+  color: var(--white);
+  background-color: var(--teal);
+  text-decoration: none;
+}
+
 .home-title h1 {
   margin-bottom: 0;
 }
@@ -180,6 +192,7 @@ hr.gradient {
 
 .home img {
   border-radius: 3%;
+  max-width: 85vh
 }
 
 /* ********************* ABOUT PAGE STYLING *********************  */
